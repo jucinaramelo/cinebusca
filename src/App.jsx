@@ -19,8 +19,8 @@ const App = () => {
     }
 
     setBuscou(false);
-    setLoading(true);  // começa a busca, mostra loading
-    setFilmes([]);     // limpa resultados antigos
+    setLoading(true);  
+    setFilmes([]);     
 
     try {
       const response = await fetch(`${API_URL}${API_KEY}&s=${titulo}`);
@@ -35,7 +35,7 @@ const App = () => {
       console.error("Erro ao buscar filmes:", error);
       setFilmes([]);
     } finally {
-      setLoading(false);  // busca terminou
+      setLoading(false); 
       setBuscou(true);
     }
   };
